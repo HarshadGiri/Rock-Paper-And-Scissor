@@ -15,7 +15,7 @@
 const item =['Rock','Paper','Scissor'];
 
 let UserInput ;
-let ComputerInput;
+let ComputerInput ;
 let play =true;
 
 
@@ -29,7 +29,7 @@ let play =true;
     }
 
      UserInput = prompt("Please Select Items 1. Rock  2. Paper 3. Scissor");
-     console.log(UserInput);
+    console.log({UserInput});
          if(!UserInput){
              break;
              
@@ -45,11 +45,12 @@ let play =true;
      }
     
     
-  ComputerInput=ComputerInput-1;
+
   UserInput=UserInput-1;
   
-     ComputerInput = Math.floor(Math.random() * 3 ) +1;
+     ComputerInput = Math.floor(Math.random() * 3 )+1 ;
         console.log({ComputerInput});
+        ComputerInput=ComputerInput-1;
 
         if(UserInput === ComputerInput){
             alert(`User Select : ${item[UserInput]}  and Computer Select ${item[ComputerInput]} \n 💁 Result is Tie`);
@@ -57,13 +58,13 @@ let play =true;
         // wRock And Paper💁💻🏃
 
         if(UserInput !== ComputerInput){
-            if( item[UserInput]=== 'Rock' && item[ComputerInput]=== 'Paper'){
+            if( item[UserInput] === 'Rock' && item[ComputerInput] === 'Paper'){
                 alert(`User Select : ${item[UserInput]}  and Computer Select ${item[ComputerInput]}  \n 💻 Computer Win the Game`);
             }
 
         
     
-            if( item[UserInput]=== 'Paper' && item[ComputerInput]=== 'Rock'){
+            if( item[UserInput] === 'Paper' && item[ComputerInput] === 'Rock'){
                 alert(`User Select : ${item[UserInput]}  and Computer Select ${item[ComputerInput]} \n 🏃 User Win the Game`);
             }
 
